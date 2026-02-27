@@ -1,0 +1,70 @@
+.eligibility-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #8b0000, #ff4d4d);
+  padding: 20px;
+}
+
+.eligibility-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.eligibility-card h2 {
+  color: #b30000;
+  text-align: center;
+}
+
+.eligibility-card p {
+  text-align: center;
+  color: #555;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #d60000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a80000;
+}
+
+.success {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error {
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

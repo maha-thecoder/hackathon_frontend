@@ -1,0 +1,62 @@
+/* Emergency.css */
+
+.container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  gap: 10px;
+}
+
+/* 🏥 Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-header h2 {
+  font-size: 28px;
+  color: #e63946; /* emergency red */
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* Subtitle */
+.page-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .page-header h2 {
+    font-size: 22px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+}
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #b71c1c;
+}
