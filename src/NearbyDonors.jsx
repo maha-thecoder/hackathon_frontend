@@ -132,26 +132,27 @@ Thank you ❤️
                 {/* Buttons */}
                 <div className="btn-group">
 
-                  <button
-                    className="view-btn"
-                    onClick={() => setSelectedDonor(donor)}
-                  >
-                    View Location
-                  </button>
+  <div className="btn-row">
+    <button
+      className="view-btn"
+      onClick={() => setSelectedDonor(donor)}
+    >
+      View Location
+    </button>
 
-                  <a href={`tel:${donor.phone}`} className="call-btn">
-                    Call
-                  </a>
+    <a href={`tel:${donor.phone}`} className="call-btn">
+      Call
+    </a>
+  </div>
 
-                  {/* 🔥 WhatsApp Button */}
-                  <button
-                    className="whatsapp-btn"
-                    onClick={() => sendWhatsApp(donor)}
-                  >
-                    send location through WhatsApp
-                  </button>
+  <button
+    className="whatsapp-btn"
+    onClick={() => sendWhatsApp(donor)}
+  >
+    Send via WhatsApp
+  </button>
 
-                </div>
+</div>
 
               </div>
             </div>

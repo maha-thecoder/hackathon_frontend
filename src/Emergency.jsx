@@ -97,16 +97,21 @@ function Emergency() {
     }
   };
 
-  return (
-    <div>
-        <div className="page-header">
-      <h2>🚨 Emergency Blood Request</h2>
-</div>
+ return (
+  <div className="emergency-page">
 
-    <div className="container">
+    {/* HEADER */}
+    <div className="page-header">
+      <h1>🚨 Emergency Blood Request</h1>
+      <p>Fill details to find nearby donors instantly</p>
+    </div>
 
-      <form onSubmit={handleSubmit} className="form">
-        {/* Patient Name */}
+    {/* MAIN GRID */}
+    <div className="emergency-grid">
+
+      {/* LEFT FORM */}
+      <form onSubmit={handleSubmit} className="form-card">
+
         <input
           name="patientName"
           placeholder="Patient Name"
@@ -114,7 +119,6 @@ function Emergency() {
           required
         />
 
-        {/* Blood Group */}
         <select
           name="bloodGroup"
           onChange={handleChange}
@@ -123,16 +127,10 @@ function Emergency() {
         >
           <option value="" disabled>Select Blood Group</option>
           {bloodGroups.map((group) => (
-            <option key={group} value={group}>
-              {group}
-            </option>
+            <option key={group} value={group}>{group}</option>
           ))}
         </select>
 
-        {/* Units */}
-       
-
-        {/* Hospital */}
         <input
           name="hospital"
           placeholder="Hospital Name"
@@ -140,7 +138,6 @@ function Emergency() {
           required
         />
 
-        {/* Contact */}
         <input
           name="contact"
           placeholder="Contact Number"
@@ -148,22 +145,26 @@ function Emergency() {
           required
         />
 
-        {/* 📍 Map */}
-        <Map setForm={setForm} userLocation={userLocation} />
-
-        {/* Coordinates */}
         {form.location && (
-          <p>
-            📍 Selected Location: {form.location.lat.toFixed(4)},{" "}
-            {form.location.lng.toFixed(4)}
+          <p className="location-text">
+            📍 {form.location.lat.toFixed(4)}, {form.location.lng.toFixed(4)}
           </p>
         )}
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-btn">
+          🚑 Find Donors
+        </button>
       </form>
+
+      {/* RIGHT MAP */}
+      <div className="map-card">
+        <Map setForm={setForm} userLocation={userLocation} />
+      </div>
+
     </div>
-    </div>
-  );
+
+  </div>
+);
 }
 
 export default Emergency;

@@ -1,94 +1,89 @@
-/* 🌐 Page Background */
+/* 🌐 Page */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
 .container {
   min-height: 100vh;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("https://images.unsplash.com/photo-1580281658629-7b2eec5b4e92");
-
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(to bottom, #ffffff, #fff5f5);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
 }
-/* 🏥 Page Header */
+
+/* 🔝 Header */
 .page-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .page-header h2 {
-  font-size: 28px;
-  color: #e63946; /* emergency red */
+  font-size: 32px;
+  color: #c1121f;
   font-weight: 700;
-  margin-bottom: 5px;
 }
 
-/* Subtitle */
 .page-header p {
   color: #666;
   font-size: 14px;
 }
 
-/* 📱 Responsive */
-@media (max-width: 480px) {
-  .page-header h2 {
-    font-size: 22px;
-  }
-
-  .page-header p {
-    font-size: 13px;
-  }
-}
-
-/* 🧊 Glass Form */
+/* 🧊 Card Form */
 .form {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  padding: 30px;
-  border-radius: 16px;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  color: white;
+  gap: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
-
-/* 🏥 Title */
-
 
 /* ✏️ Inputs */
 .form input,
 .form select {
   padding: 12px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
+  border-radius: 10px;
+  border: 1px solid #ddd;
   font-size: 14px;
+  outline: none;
+  transition: 0.2s;
 }
 
-/* 🗺️ Location text */
+.form input:focus,
+.form select:focus {
+  border-color: #e63946;
+}
+
+/* 📍 Location text */
 .form p {
   font-size: 13px;
-  color: #e0e0e0;
+  color: #666;
 }
 
-/* 🖼️ Uploaded image preview */
+/* 🗺 Map */
+.form > div {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 🖼️ Image Upload */
 .form img {
-  display: block;
-  margin: 10px auto;
+  width: 100px;
+  border-radius: 10px;
+  margin: auto;
 }
 
-/* 🔘 Submit Button */
+/* 🔘 Submit */
 .form button {
-  padding: 12px;
+  padding: 14px;
   border: none;
-  border-radius: 8px;
-  background-color: #e63946;
+  border-radius: 10px;
+  background: #e63946;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -96,41 +91,17 @@
 }
 
 .form button:hover {
-  background-color: #c1121f;
+  background: #c1121f;
+  transform: translateY(-2px);
 }
 
-/* 📱 RESPONSIVE DESIGN */
-
-/* Tablet */
-@media (max-width: 768px) {
+/* 📱 Responsive */
+@media (max-width: 600px) {
   .form {
     padding: 25px;
   }
 
-  h2 {
-    font-size: 22px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .form {
-    padding: 20px;
-    gap: 10px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  .form input,
-  .form select {
-    font-size: 13px;
-    padding: 10px;
-  }
-
-  .form button {
-    font-size: 14px;
-    padding: 10px;
+  .page-header h2 {
+    font-size: 24px;
   }
 }

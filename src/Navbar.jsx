@@ -1,32 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
+  const location = useLocation();
+
   return (
-    <nav style={styles.nav}>
-      <h2 style={{ color: "white" }}>🩸 Blood Help</h2>
-      <div>
-        <Link to="/" style={styles.link}>Home</Link>
-        <Link to="/emergency" style={styles.link}>Emergency</Link>
-        <Link to="/donor" style={styles.link}>Donate</Link>
-        <Link to='/chatbot' style={styles.link}>Chat Bot</Link>
+    <nav className="navbar">
+
+      {/* Logo */}
+      <div className="logo">
+  <span className="logo-icon">🩸</span>
+  <div className="logo-text">
+    <span className="logo-main">One Page</span>
+    <span className="logo-sub">One Life</span>
+  </div>
+</div>
+      {/* Links */}
+      <div className="nav-links">
+        <Link className={location.pathname === "/" ? "active" : ""} to="/">
+          Home
+        </Link>
+
+        <Link className={location.pathname === "/emergency" ? "active" : ""} to="/emergency">
+          Emergency
+        </Link>
+
+        
+
+        <Link className={location.pathname === "/chatbot" ? "active" : ""} to="/chatbot">
+          AI Assist
+        </Link>
+
+        <Link className={location.pathname === "/registration" ? "active" : ""} to="/registration">
+          Donar Login
+        </Link>
       </div>
+
     </nav>
   );
 }
-
-const styles = {
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    padding: "15px 30px",
-    backgroundColor: "#d32f2f"
-  },
-  link: {
-    marginLeft: "20px",
-    color: "white",
-    textDecoration: "none",
-    fontWeight: "bold"
-  }
-};
 
 export default Navbar;

@@ -1,0 +1,130 @@
+/* 🌐 Page */
+.profile-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ffffff, #fff5f5);
+}
+
+/* 🧊 Card */
+.profile-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #e63946;
+}
+
+/* Name */
+.profile-card h2 {
+  margin: 10px 0;
+  color: #222;
+}
+
+/* Blood */
+.blood {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e63946;
+}
+
+/* Info */
+.info {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* FULL PAGE */
+.profile-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff, #ffe5e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CARD */
+.profile-card {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* IMAGE */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e63946;
+  margin-bottom: 15px;
+}
+
+/* NAME */
+.profile-card h2 {
+  margin: 10px 0;
+  color: #222;
+}
+
+/* BLOOD BADGE */
+.badge {
+  display: inline-block;
+  background: #e63946;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* INFO */
+.info {
+  color: #555;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* MAP */
+.map-box {
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 200px;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 20px;
+  }
+}

@@ -1,58 +1,110 @@
-.upload-box {
+.home-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      135deg,
+      rgba(193, 18, 31, 0.9),
+      rgba(230, 57, 70, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1580281658629-7b2eec5b4e92");
+
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.file-btn {
-  background: #4f46e5;
+/* Main Content Box */
+.home-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 50px 40px;
+  border-radius: 20px;
   color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
+  max-width: 700px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.file-btn:hover {
-  background: #3730a3;
+/* Small Badge */
+.hero-badge {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  opacity: 0.9;
 }
 
-.upload-btn {
-  background: #16a34a;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 8px;
-  cursor: pointer;
+/* Title */
+.home-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-.upload-btn:hover {
-  background: #15803d;
+.home-title span {
+  color: #ffe5e5;
 }
 
-.preview-img {
-  width: 160px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,.15);
+/* Subtitle */
+.home-text {
+  font-size: 18px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+  opacity: 0.95;
 }
 
-
-.url-box {
-  margin-top: 10px;
+/* Buttons */
+.home-actions {
   display: flex;
-  gap: 5px;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.url-box input {
-  flex: 1;
-  padding: 5px;
-}
-
-.url-box button {
-  padding: 5px 10px;
-  background: green;
-  color: white;
+.btn {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.primary-btn {
+  background-color: white;
+  color: #c1121f;
+}
+
+.primary-btn:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-3px);
+}
+
+/* Secondary Button */
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: white;
+  color: #c1121f;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 36px;
+  }
+
+  .home-text {
+    font-size: 16px;
+  }
 }

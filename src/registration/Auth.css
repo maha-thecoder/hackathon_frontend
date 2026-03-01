@@ -1,0 +1,78 @@
+/* 🌐 Page */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ffffff, #fff5f5);
+}
+
+/* 🧊 Card */
+.auth-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.auth-card h2 {
+  text-align: center;
+  color: #e63946;
+}
+
+/* Inputs */
+.auth-card input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: #e63946;
+}
+
+/* Button */
+.auth-card button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #e63946;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  background: #c1121f;
+}
+
+/* Error */
+.error {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Switch text */
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Clickable link */
+.auth-switch span {
+  color: #e63946;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-switch span:hover {
+  text-decoration: underline;
+}

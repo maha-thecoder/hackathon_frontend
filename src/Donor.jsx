@@ -85,7 +85,7 @@ function Donor() {
   };
 
   return (
-    <div>
+    <div className="donor-page">
 <div className="page-header">
   <h2>🩸 Blood Donor Registration</h2>
   <p>Register as a donor and help save lives in emergencies</p>

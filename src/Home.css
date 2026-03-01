@@ -3,10 +3,10 @@
   height: 100vh;
   width: 100%;
   background: linear-gradient(
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.65)
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1580281658629-7b2eec5b4e92"); /* medical bg */
+    url("https://images.unsplash.com/photo-1580281658629-7b2eec5b4e92");
 
   background-size: cover;
   background-position: center;

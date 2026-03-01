@@ -9,7 +9,6 @@ function Eligibility() {
     age: "",
     weight: "",
     health: "",
-    recentDonation: "",
     medication: ""
   });
 
@@ -20,14 +19,13 @@ function Eligibility() {
   };
 
   const checkEligibility = () => {
-    const { age, weight, health, recentDonation, medication } = form;
+    const { age, weight, health,  medication } = form;
     try{
 
     if (
       age === "yes" &&
       weight === "yes" &&
       health === "yes" &&
-      recentDonation === "no" &&
       medication === "no"
     ) {
       setResult("eligible");
@@ -83,12 +81,7 @@ function Eligibility() {
         </select>
 
         {/* Q4 */}
-        <label>4. Have you donated blood in the last 3 months?</label>
-        <select name="recentDonation" onChange={handleChange}>
-          <option value="">Select</option>
-          <option value="no">No</option>
-          <option value="yes">Yes</option>
-        </select>
+        
 
         {/* Q5 */}
         <label>5. Are you currently on medication?</label>
